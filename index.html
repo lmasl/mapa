@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ticket Reservation Widget</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style/icon.css">
+	<link rel="stylesheet" href="style/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+	<script src="js/jquery.twidget.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+
+</head>
+<body>
+
+	<div class="container">
+
+
+		<div class="twidget-container" id="twidget"></div>
+		<br><br>
+		<audio id="buttonPressed" src="media/button-3.wav" preload="auto"></audio>
+		<script>
+			$('#twidget').twidget({
+				locale: 'ru',
+				marker: 78606,
+				open_in_new_tab: false,
+				default_origin: 'SVO',
+				default_destination: 'ekat',
+				default_hotel_location: 'rio'
+
+			});
+		</script>
+		
+	<div id="map">
+        <div class="plane">
+            <svg width="25" height="25">
+                <g>
+                 <title>background</title>
+                 <rect fill="none" id="canvas_background" height="27" width="27" y="-1" x="-1"/>
+                 <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                  <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                 </g>
+                </g>
+                <g>
+                 <title>Layer 1</title>
+                 <path stroke="#db20cb" id="svg_1" d="m12.80644,-0.25c-0.23035,0 -0.43529,0.10296 -0.60821,0.28971c-0.17277,0.1866 -0.31568,0.45398 -0.4346,0.78791c-0.2378,0.66777 -0.38409,1.60583 -0.4641,2.72924c-0.07986,1.12125 -0.09332,2.42685 -0.06014,3.82446c-2.84541,1.27095 -8.61644,3.89512 -9.08003,4.48104c-0.61722,0.78009 -0.4178,1.67411 -0.16907,2.2676l9.48739,-2.10244c0.20054,2.73984 0.48568,5.45352 0.73416,7.57988c-0.92781,0.29565 -2.65973,0.87942 -3.01722,1.24142c-0.49247,0.49869 -0.49247,2.1092 -0.49247,2.1092l3.88301,-0.34386c0.09145,0.69421 0.14865,1.09928 0.14865,1.09928l0.00567,0.03655l0.03064,0l0.07149,0l0.03064,0l0.00567,-0.03655c0,0 0.05708,-0.40507 0.14865,-1.09928l3.88415,0.34386c0,0 0,-1.61051 -0.49247,-2.1092c-0.35762,-0.36214 -2.09081,-0.94724 -3.01835,-1.24279c0.24797,-2.11984 0.5326,-4.82313 0.73303,-7.55415l9.3762,2.07807c0.24872,-0.59349 0.44928,-1.48752 -0.16794,-2.2676c-0.45786,-0.57867 -6.08943,-3.14448 -8.96996,-4.43231c0.03442,-1.41573 0.02177,-2.73912 -0.05901,-3.87319l0,-0.00271c-0.08006,-1.12217 -0.22649,-2.05932 -0.4641,-2.72653c-0.11888,-0.33384 -0.26063,-0.60125 -0.43346,-0.78791c-0.17292,-0.18675 -0.37786,-0.28971 -0.60821,-0.28971l0,0z" stroke-width="1.5" fill="#ff0fff"/>
+                </g>
+               </svg>
+        </div>
+	</div>
+	<script src="js/mappa.js"></script>
+
+	<div class="footer">
+		<section>
+			<div class="social-share fb">
+				<span class="fb-inner"></span>
+				<a class="cta fb" href="#">Like</a>
+			</div>
+			<div class="social-share tw">
+				<span class="tw-inner"></span>
+				<a class="cta tw" href="#">Tweet</a>
+			</div>
+		</section>
+</div>
+
+		</div>
+		
+
+	
+
+
+	<script>
+		$('#searchTickets, #searchHotel').click(function() {
+			document.getElementById('buttonPressed').play();
+		});
+
+	</script>
+	
+
+</body>
+</html>

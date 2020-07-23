@@ -1,0 +1,27 @@
+.container {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  color: #ffffff;
+  background: rgb(2,0,36);
+  background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(206,232,237,1) 0%, rgba(223,245,249,0.9808298319327731) 3%, rgba(0,212,255,1) 42%, rgba(5,179,75,1) 100%, rgba(47,187,223,1) 100%);}
+
+#map {
+  width: 900px; 
+  height: 580px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.plane {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+}
